@@ -12,7 +12,7 @@ This problem is an instance of longest path problem, and the graph is a DAG
 (directed acyclic graph). Therefore, this can be solved in linear time,
 visiting each node (element in the triangle) once.
 
-The solution is done in linear time, and it uses linear space (2n).
+The solution is done in linear time, and it uses extra linear space (n).
 If it was specified that changing the original triangle wasn't an issue, then I
 wouldn't need extra space at all, but that wasn't the case.
 The solution could be improved to use less space - the amount of elements in
