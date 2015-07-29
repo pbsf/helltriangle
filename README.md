@@ -1,4 +1,4 @@
-SkyHub interview challenge By Paulo Barros
+Interview challenge By Paulo Barros
 
 I choose to do this exercise in Python because I have not used the language in
 a long time, but I enjoy it. Aside from a limited experience with

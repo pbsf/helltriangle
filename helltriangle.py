@@ -1,5 +1,5 @@
 # helltriangle.py
-""" SkyHub interview
+"""
  By Paulo Barros
 
  I choose to do this exercise in Python because I have not used the language in
