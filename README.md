@@ -19,8 +19,7 @@ The solution could be improved to use less space - the amount of elements in
 the bottom of the triangle times two, which is still linear, but with a smaller
 coefficient. I may improve that in the future if I have time to.
 
-This project is a solution in python to the HellTriangle problem.
-Tested on Python 2.7.
+Tested using Python 2.7.
 
 To test it run the helltriangle.py file passing an input.
 For example:
