@@ -25,6 +25,6 @@ To test it run the helltriangle.py file passing an input. <br />
 For example: <br />
 $ python helltriangle.py [[6],[3,5],[9,7,1],[4,6,8,4]]
 
-To run all tests run the class tests.py: <br />
+To run all tests run the class AllTests.py: <br />
 $ python AllTests.py
 
