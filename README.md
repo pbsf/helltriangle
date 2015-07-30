@@ -1,9 +1,10 @@
 Interview challenge by Paulo Barros
 
 I choose to do this exercise in Python because I have not used the language in
-a long time, but I enjoy it. Aside from a limited experience with
-Python, I also never had the opportunity to use PyUnit either, so I figure
-that I could use this exercise to learn something new.
+a long time, but I enjoy it. Aside from my limited experience with
+Python, I also never had the opportunity to use PyUnit, so I figure
+that I could use this exercise to learn something new. The tests are done using
+PyUnit.
 
 This solution assumes that one of the bases of the equilateral triangle is
 on the bottom.
@@ -12,12 +13,12 @@ This problem is an instance of longest path problem, and the graph is a DAG
 (directed acyclic graph). Therefore, this can be solved in linear time,
 visiting each node (element in the triangle) once.
 
-The solution is done in linear time, and it uses extra linear space (n).
-If it was specified that changing the original triangle wasn't an issue, then I
-wouldn't need extra space at all, but that wasn't the case.
-The solution could be improved to use less space - the amount of elements in
-the bottom of the triangle times two, which is still linear, but with a smaller
-coefficient. I may improve that in the future if I have time to.
+The solution uses logarithmic space.
+If it was specified that changing the original triangle wasn't an issue, then we
+wouldn't need extra space at all, but that wasn't the case. Therefore, it is
+needed to keep track of 2 "rows" of the triangle, and in the worst case scenario
+the size of the row will be the size of the last row, which is equal to the
+height of the triangle, therefore the solution uses logarithmic space.
 
 Tested using Python 2.7.
 

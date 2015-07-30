@@ -26,28 +26,29 @@ class HellTriangle():
             # Triangle only has one row and one element. Return it.
             return triangle[0][0]
 
-        # Usual cases
-        new_triangle = triangle[:]
-        previous_length = 1
-        for i in range(1, len(new_triangle)):
-            row_length = len(new_triangle[i])
+        # Usual case
+        prev_row = triangle[0][:]
+        prev_row_length = 1
+        for i in range(1, len(triangle)):
+            cur_row = triangle[i][:]
+            cur_row_length = len(cur_row)
 
-            if (row_length - 1 != previous_length):
+            if (cur_row_length - 1 != prev_row_length):
                 raise ValueError("Invalid triangle passed as input! Must be equilateral.")
 
-            previous_length = row_length
-            for j in range(row_length):
+            for j in range(cur_row_length):
                 if (j == 0):
                     # Handling first element in a row.
-                    new_triangle[i][j] += new_triangle[i-1][j]
-                elif (j == len(new_triangle[i])-1):
+                    cur_row[j] += prev_row[j]
+                elif (j == cur_row_length-1):
                     # Handling last element in a row.
-                    new_triangle[i][j] += new_triangle[i-1][j-1]
+                    cur_row[j] += prev_row[j-1]
                 else:
                     # Handling in-between elements in a row.
-                    new_triangle[i][j] += max(new_triangle[i-1][j-1], new_triangle[i-1][j])
-
-        return max(new_triangle[len(new_triangle)-1])
+                    cur_row[j] += max(prev_row[j-1], prev_row[j])
+            prev_row = cur_row
+            prev_row_length += 1
+        return max(cur_row)
 
 """
 Receives as input an equilateral triangle, in the format of a multidimensional
